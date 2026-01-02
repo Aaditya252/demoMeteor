@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Modal, Button, ProgressBar, Alert } from 'react-bootstrap';
 import {
   FaMeteor, FaExclamationTriangle, FaSatelliteDish, FaSms, FaBroadcastTower,
-  FaShieldAlt, FaRocket, FaSatellite, FaTelescope, FaUsers, FaGlobe, FaCheckCircle
+  FaShieldAlt, FaRocket, FaSatellite, FaSearch, FaUsers, FaGlobe, FaCheckCircle
 } from 'react-icons/fa';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -97,7 +97,7 @@ export default function MitigationPage() {
   };
 
   // Styles (inline for brevity, can be moved to CSS module)
-  const styles = {
+  const styles: Record<string, React.CSSProperties> = {
     root: {
       fontFamily: "'Montserrat', sans-serif",
       background: "#000",
@@ -289,7 +289,7 @@ export default function MitigationPage() {
             <Button variant="outline-light" style={styles.strategyBtn} onClick={() => openModal('neo')}>Learn More</Button>
           </div>
           <div className="strategy-card" style={styles.strategyCard}>
-            <FaTelescope style={styles.strategyIcon} />
+            <FaSearch style={styles.strategyIcon} />
             <h3 style={styles.strategyTitle}>Space-Based Observations</h3>
             <p style={styles.strategyDescription}>
               Orbital telescopes and sensors providing continuous monitoring of space objects beyond Earth's atmosphere.

@@ -9,6 +9,7 @@ import {
 } from '@/lib/solar-system-data';
 import { InfoPanel } from '@/components/info-panel';
 import { LandingPage } from '@/components/landing-page';
+import MitigationPage from '@/components/mitigation';
 
 import { AnimatePresence, motion } from 'framer-motion';
 

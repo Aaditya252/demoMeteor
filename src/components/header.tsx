@@ -21,13 +21,14 @@ const MeteorLogo = (props: React.SVGProps<SVGSVGElement>) => (
 
 type HeaderProps = {
   onNavigateHome?: () => void;
+  onNavigateMitigation?: () => void;
 };
 
-export function Header({ onNavigateHome }: HeaderProps) {
+export function Header({ onNavigateHome, onNavigateMitigation }: HeaderProps) {
   const navButtons = [
     { name: "Home", onClick: () => onNavigateHome ? onNavigateHome() : alert("Home clicked") },
     { name: "Globe", onClick: () => window.open("/map5.html", "_blank") },
-    { name: "Mitigation", onClick: () => window.open("/mitigation.html", "_blank") },
+    { name: "Mitigation", onClick: () => onNavigateMitigation ? onNavigateMitigation() : window.open("/mitigation.html", "_blank") },
     { name: "Hazard zone", onClick: () => alert("Hazard zone clicked") },
     { name: "Past events", onClick: () => window.open("/file.html", "_blank")}
   ];
