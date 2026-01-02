@@ -1,3 +1,4 @@
+import path from 'path';
 import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
@@ -31,6 +32,8 @@ const nextConfig: NextConfig = {
     ],
   },
   devIndicators: {},
+  // Set this to this project's root to avoid warnings when multiple lockfiles exist on the machine
+  outputFileTracingRoot: path.join(__dirname),
 };
 
 export default nextConfig;
